@@ -1,0 +1,41 @@
+format = """
+$directory\
+$git_branch\
+$jobs\
+$python\
+$cmd_duration\
+$character\
+"""
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# Configure directory settings
+[directory]
+style = "blue"
+read_only = " 󰌾"
+
+# Configure running jobs view
+[jobs]
+symbol = " "
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+# Push items to right-sideof terminal
+# [fill]
+# symbol = " "
+
+# Replace the '❯' symbol in the prompt with '➜', '↪'
+[character]
+success_symbol = '[➜](bold green) ' 
+error_symbol = '[➜](bold red) '
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[python]
+style = "yellow bold"
+symbol = "🐍"
+format = "[(\\($symbol $virtualenv\\) )]($style)"

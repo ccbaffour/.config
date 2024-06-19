@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=HideMouseCursor
+Comment=Hide mouse when typing or when not in use.
+Exec=xbanish
+Icon=HideMouseCursor.png
+Terminal=false
+Type=Application
