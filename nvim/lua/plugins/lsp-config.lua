@@ -24,6 +24,11 @@ return {
 					"black", -- python formatter
 					"pylint", -- python linter
 					"eslint_d", -- js linter
+					"shellcheck", -- bash linter
+					"shfmt", -- bash formatter
+					"prettierd", -- prettierd formatter
+					"markdown-toc", -- markdown toc formatter
+					"markdownlint", -- markdown formatter
 				},
 			})
 		end,
@@ -33,17 +38,17 @@ return {
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"lua_ls",
-					"bashls",
-					"gopls",
-					"html",
-					"jsonls",
-					"marksman",
-					"powershell_es",
-					"pyright",
-					"rust_analyzer",
-					"sqls",
-					"yamlls",
+					"lua_ls", -- lua lsp
+					"bashls", -- bash lsp
+					"gopls", -- go lsp
+					"html", -- html lsp
+					"jsonls", -- json lsp
+					"marksman", -- markdown lsp
+					"powershell_es", -- powershell lsp
+					"pyright", -- python lsp
+					"rust_analyzer", -- rust lsp
+					"sqls", -- sql lsp
+					"yamlls", -- yaml lsp
 				},
 			})
 		end,
