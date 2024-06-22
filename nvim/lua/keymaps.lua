@@ -26,7 +26,7 @@ vim.cmd([[
     autocmd BufEnter *.py let @g=":w\<cr> :vsp | terminal python %\<cr>i"
     autocmd BufEnter *.js let @g=":w\<cr> :vsp | terminal node %\<cr>i" 
     autocmd BufEnter *.go let @g=":w\<cr> :vsp | terminal go run %\<cr>i"
-    autocmd BufEnter *.html let @g=":w\<cr> :vsp :silent !google-chrome %\<cr>i"
+    autocmd BufEnter *.html let @g=":w\<cr> :silent !google-chrome --guest --new-window % & \<cr>"
     autocmd BufEnter *.c let @g=":w\<cr> :!gcc %\<cr> | :vsp | terminal ./a.out\<cr>i"
     autocmd BufEnter *.cpp let @g=":w\<cr> :!g++ %\<cr> | :vsp | terminal ./a.out\<cr>i"
     autocmd BufEnter *.asm let @g=":w\<cr> :!nasm -f elf64 -o out.o % && ld out.o -o a.out \<cr> | :vsp | terminal ./a.out \<cr>i"
